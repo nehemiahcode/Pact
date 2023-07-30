@@ -82,7 +82,7 @@ export default function Home() {
               Lets Get Started
             </h1>
             <p className=" text-md pl-3 py-3 font-medium font-Poppins px-3">
-              Fill in the awesome form to Create an Account with pact.
+              Fill in the awesome form to Create an Account with packt.
             </p>
             {Inputs.map((input, index) => (
               <div key={index}>
@@ -95,7 +95,7 @@ export default function Home() {
                     autoComplete="off"
                     className={` ${
                       loading && "cursor-not-allowed"
-                    } mt-3 bg-white outline-none placeholder:text-neutral-500 font-medium border-[2px]  w-[95%] pl-9 h-[50px] py-3 px-3`}
+                    } mt-3 bg-white outline-none placeholder:text-neutral-500 font-medium border-[2px]  w-[95%] pl-9 h-[60px] py-3 px-3`}
                   />
                   <span className=" absolute text-xl text-black  left-5 top-7">
                     {input.icon}

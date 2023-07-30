@@ -1,13 +1,16 @@
+"use client"
 import Link from "next/link";
 import React from "react";
 import { BsArrowRightShort } from "react-icons/bs";
 import bgImage from "@/public/rose.svg";
 import Image from "next/image";
+import { Fade } from "react-awesome-reveal";
 
 export default function Hero() {
   return (
     <section className=" font-Poppins bg-slate-900 bg-gradient-to-tr from-slate-900 via-slate-800 to-slate-600 grid grid-cols-1 lg:grid-cols-2 w-full h-auto lg:px-20 xl:px-24 py-10 ">
-      <div className=" w-full h-auto px-5 sm:px-10 lg:p-0 ">
+     <Fade>
+     <div className=" w-full h-auto px-5 sm:px-10 lg:p-0 ">
         <button
           type="button"
           className=" rotate-[6deg] flex items-center gap-3 bg-slate-700  text-white  ring-white ring-inset ring-1 rounded-full px-5 py-1"
@@ -34,9 +37,12 @@ export default function Hero() {
           Request for one
         </button>
       </div>
-      <div className=" flex items-center justify-center px-5">
+     </Fade>
+     <Fade>
+     <div className=" flex items-center justify-center px-5">
         <Image src={bgImage}  className=" sm:w-[60%] lg:w-[100%] my-3 w-[100%] h-[100%]" />
       </div>
+     </Fade>
     </section>
   );
 }

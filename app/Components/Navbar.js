@@ -9,7 +9,7 @@ export default function Navbar() {
         <span className=" text-pink-400 text-5xl">
           <BiLogoPatreon />
         </span>
-        <h1 className=" text-white text-2xl font-bold">Pact</h1>
+        <h1 className=" text-white text-2xl font-bold">Packt</h1>
       </div>
       <button className=" font-Poppins font-medium hover:bg-cyan-600 group flex items-center gap-2 justify-center text-white py-2 px-5 bg-sky-500 rounded">
         Get started
