@@ -1,113 +1,129 @@
-import Image from 'next/image'
+"use client";
+import Images from "@/public/features.svg";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import React, { useEffect, useState } from "react";
+import { AiOutlineMail } from "react-icons/ai";
+import { MdLockOutline } from "react-icons/md";
+import { RiLoader4Line } from "react-icons/ri";
+import { BiUser } from "react-icons/bi";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import { useForm } from "react-hook-form";
+
+const schema = yup.object({
+  Name: yup
+    .string()
+    .required("username is a required field")
+    .max(20, "that's too long!"),
+  email: yup
+    .string()
+    .required("email is a required field")
+    .email("email is not valid"),
+  password: yup
+    .string()
+    .required("password  is a required field")
+    .min(5, "It must be more than 5 characters")
+    .max(10, "It must not be more than 10 characters"),
+});
 
 export default function Home() {
+  const [loading, setLoading] = useState(false);
+  const [text, setText] = useState("")
+  const route = useRouter();
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
+  const onSubmit = (data) => {
+    setLoading(true);
+
+    setTimeout(() => {
+      setLoading(false);
+      route.push("/home");
+      setText(data.Name);
+      reset();
+    }, 4000);
+  };
+
+  const Inputs = [
+    {
+      type: "text",
+      errors: "Name",
+      placeholder: "Name",
+      icon: <BiUser />,
+    },
+    {
+      type: "email",
+      errors: "email",
+      placeholder: "Email",
+      icon: <AiOutlineMail />,
+    },
+    {
+      type: "password",
+      errors: "password",
+      placeholder: "Create a password",
+      icon: <MdLockOutline />,
+    },
+  ];
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <>
+        <section className=" font-Poppins w-screen h-screen bg-gradient-to-br from-slate-800 via-slate-400 to-slate-600   py-20  ">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="form bg-slate-200 w-[95%] sm:w-[70%] md:w-[50%] lg:w-[40%] mx-auto  rounded-lg shadow-xl h-[auto] py-10"
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+            <h1 className=" text-3xl pl-3  font-Poppins font-semibold bg-gradient-to-r from-slate-500 via-black to-slate-200 text-transparent bg-clip-text">
+              Lets Get Started
+            </h1>
+            <p className=" text-md pl-3 py-3 font-medium font-Poppins px-3">
+              Fill in the awesome form to Create an Account with pact.
+            </p>
+            {Inputs.map((input, index) => (
+              <div key={index}>
+                <span className=" relative w-full flex flex-col items-center">
+                  <input
+                    type={input.type}
+                    placeholder={input.placeholder}
+                    {...register(input.errors)}
+                    disabled={loading}
+                    autoComplete="off"
+                    className={` ${
+                      loading && "cursor-not-allowed"
+                    } mt-3 bg-white outline-none placeholder:text-neutral-500 font-medium border-[2px]  w-[95%] pl-9 h-[50px] py-3 px-3`}
+                  />
+                  <span className=" absolute text-xl text-black  left-5 top-7">
+                    {input.icon}
+                  </span>
+                </span>
+                <span className=" text-red-600  text-sm pl-5 mb-5 font-medium">
+                  {errors[input.errors]?.message}
+                </span>
+              </div>
+            ))}
+            <button
+              disabled={loading}
+              type="submit"
+              className={` ${
+                loading && " cursor-not-allowed"
+              } bg-gradient-to-br from-slate-800 to-blue-900 duration-300  active:ring-2 ring-inset ring-white flex items-center justify-center  rounded transition-all
+                my-4 px-3 py-3 ml-4 w-[160px]  text-white font-Poppins   active:scale-105 hover:bg-red-400`}
+            >
+              {loading ? (
+                <div className=" animate-spin text-2xl text-white">
+                  <RiLoader4Line />
+                </div>
+              ) : (
+                " Create Account"
+              )}
+            </button>
+          </form>
+        </section>
+    </>
+  );
 }
