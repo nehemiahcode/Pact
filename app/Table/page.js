@@ -6,7 +6,7 @@ import {
   flexRender,
 } from "@tanstack/react-table";
 import Datas from "../Components/MyData.json";
-import {Ripples} from "react-ripples";
+import Ripples from "react-ripples";
 
 export default function Table() {
   const data = useMemo(() => Datas, []);
@@ -56,10 +56,10 @@ export default function Table() {
       <Ripples>
         <button className=" bg-sky-500 py-3 px-3 rounded text-white font-Poppins font-medium">Ripple Button</button>
       </Ripples>
-      <div className=" w-[100%] h-[400px] mx-auto w3-container">
+      <div className=" w-[100%] h-[400px] mx-auto">
         <div>
           <div className=" overflow-x-auto overflow-y-scroll">
-            <table className=" w3-table-all w-[100%] overflow-x-scroll border-[1px]">
+            <table className="  w-[100%] overflow-x-scroll border-[1px]">
               <thead>
                 {tables.getHeaderGroups().map((headergroup) => (
                   <tr key={headergroup.id}>
