@@ -7,7 +7,6 @@
 body, html {
     overflow-x: hidden;
     font-family: 'Poppins', "sans-serif";
-    user-select: none;
     user-zoom: none;
 }
 

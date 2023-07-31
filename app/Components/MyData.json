@@ -1,0 +1,90 @@
+[
+    {
+        "id":1,
+        "first_name":"Nehemiah",
+        "last_name": "Ekemezie",
+        "email":"codehubby@gmail.com",
+        "genders":"Male",
+        "dob":"2023-04-28T11:19:324"
+    },
+    {
+        "id":2,
+        "first_name":"Justice",
+        "last_name": "Ekemezie",
+        "email":"codehubby@gmail.com",
+        "genders":"Male",
+        "dob":"2023-04-28T11:19:324"
+    },
+    {
+        "id":3,
+        "first_name":"Linda",
+        "last_name": "Ekemezie",
+        "email":"codehubby@gmail.com",
+        "genders":"Male",
+        "dob":"2023-04-28T11:19:324"
+    },
+    {
+        "id":4,
+        "first_name":"Charity",
+        "last_name": "Ekemezie",
+        "email":"chacha@gmail.com",
+        "genders":"Male",
+        "dob":"2023-04-28T11:19:324"
+    },
+    {
+        "id":5,
+        "first_name":"Mabel",
+        "last_name": "Ekemezie",
+        "email":"mabel123@gmail.com",
+        "genders":"Female",
+        "dob":"2023-04-28T11:19:324"
+    },
+      {
+        "id":7,
+        "first_name":"Goodness",
+        "last_name": "Ekemezie",
+        "email":"goodness@gmail.com",
+        "genders":"Male",
+        "dob":"2023-04-28T11:19:324"
+    },
+    {
+        "id":7,
+        "first_name":"Fate",
+        "last_name": "Ekemezie",
+        "email":"fate@gmail.com",
+        "genders":"Female",
+        "dob":"2023-04-28T11:19:324"
+    },
+    {
+        "id":8,
+        "first_name":"Promise",
+        "last_name": "Ekemezie",
+        "email":"promise@gmail.com",
+        "genders":"Female",
+        "dob":"2023-04-28T11:19:324"
+    },
+    {
+        "id":9,
+        "first_name":"Esther",
+        "last_name": "Ekemezie",
+        "email":"promise@gmail.com",
+        "genders":"Female",
+        "dob":"2023-04-28T11:19:324"
+    },
+    {
+        "id":10,
+        "first_name":"Joseph",
+        "last_name": "Ekemezie",
+        "email":"codehubby@gmail.com",
+        "genders":"Male",
+        "dob":"2023-04-28T11:19:324"
+    },
+    {
+        "id":11,
+        "first_name":"Mark",
+        "last_name": "Ekemezie",
+        "email":"codehubby@gmail.com",
+        "genders":"Male",
+        "dob":"2023-04-28T11:19:324"
+    }
+]
