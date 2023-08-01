@@ -23,6 +23,7 @@
     "react-icons": "^4.10.1",
     "react-ripples": "^2.2.1",
     "tailwindcss": "3.3.3",
+    "tw-elements": "^1.0.0-beta3",
     "yup": "^1.2.0"
   }
 }

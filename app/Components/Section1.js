@@ -6,6 +6,7 @@ import { FaCode } from "react-icons/fa";
 import { MdOutlinePhonelink } from "react-icons/md";
 import { LiaShippingFastSolid } from "react-icons/lia";
 import { Fade } from "react-awesome-reveal";
+import Ripples from "react-ripples";
 
 export default function Section1() {
   const Cards = [
@@ -42,21 +43,23 @@ export default function Section1() {
       <div className=" grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3 py-10">
         {Cards.map((card, index) => (
           <Fade key={index}>
-            <div
-              className={` py-3 px-3 ${
-                card.margin && "md:ml-[50%] lg:m-0"
-              } lg:w-[100%] sm:w-[80%] md:w-[100%] font-Poppins mx-auto flex justify-center flex-col items-center text-white bg-slate-700 w-[90%] h-[300px]`}
-            >
-              <span className=" rounded-full flex items-center text-2xl text-white justify-center w-[60px] bg-gradient-to-b from-fuchsia-700  to-cyan-900 h-[60px]">
-                {card.icon}
-              </span>
-              <h1 className=" font-Poppins text-2xl font-semibold">
-                {card.heading}
-              </h1>
-              <p className=" text-center text-md font-Poppins py-2 font-medium">
-                {card.paragraph}
-              </p>
-            </div>
+            <Ripples>
+              <div
+                className={` py-3 px-3 ${
+                  card.margin && "md:ml-[50%] lg:m-0"
+                } lg:w-[100%] sm:w-[80%] md:w-[100%] font-Poppins mx-auto flex justify-center flex-col items-center text-white bg-slate-700 w-[90%] h-[300px]`}
+              >
+                <span className=" rounded-full flex items-center text-2xl text-white justify-center w-[60px] bg-gradient-to-b from-fuchsia-700  to-cyan-900 h-[60px]">
+                  {card.icon}
+                </span>
+                <h1 className=" font-Poppins text-2xl font-semibold">
+                  {card.heading}
+                </h1>
+                <p className=" text-center text-md font-Poppins py-2 font-medium">
+                  {card.paragraph}
+                </p>
+              </div>
+            </Ripples>
           </Fade>
         ))}
       </div>

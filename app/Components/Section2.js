@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import TestImage1 from "@/public/testimonial-01.jpg";
 import TestImage2 from "@/public/testimonial-04.jpg";
 import TestImage3 from "@/public/testimonial-03.jpg";
@@ -8,8 +8,18 @@ import TestImage4 from "@/public/testimonial-09.jpg";
 import TestImage5 from "@/public/testimonial-05.jpg";
 import TestImage6 from "@/public/testimonial-08.jpg";
 import { Fade } from "react-awesome-reveal";
+import Ripples from "react-ripples"
+import "tw-elements/dist/css/tw-elements.min.css";
+import {
+  Ripple,
+  initTE,
+} from "tw-elements";
 
 export default function Section2() {
+  useEffect(() => {
+    initTE({ Ripple });
+  })
+  
   const Test = [
     { quotes: "", image: TestImage1, name: "James Pet", social: "J Pet" },
     { quotes: "", image: TestImage2, name: "Licia McFarland", social: "Lia" },
@@ -29,9 +39,17 @@ export default function Section2() {
       <h1 className=" text-white font-Poppins text-4xl text-center px-5 sm:px-8 md:p-0 lg:text-5xl font-semibold">
         Sound too good? Hear what our customers have to say
       </h1>
+      <button
+  type="button"
+  data-te-ripple-init
+  data-te-ripple-color="light"
+  class="inline-block rounded bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
+  Click me
+</button>
       <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 w-full gap-6">
         {Test.map((test, index) => (
           <Fade key={index}>
+            <Ripples>
             <div
               className={`flex ${
                 test.span && " hidden sm:flex"
@@ -55,6 +73,7 @@ export default function Section2() {
                 </p>
               </span>
             </div>
+            </Ripples>
           </Fade>
         ))}
       </div>
