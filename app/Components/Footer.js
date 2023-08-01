@@ -11,7 +11,7 @@ export default function Footer() {
         </span>
         <h1 className=" text-white text-2xl font-bold">Packt</h1>
       </div>
-      <h1 className=" text-slate-200 py-2">Terms.Privacy Policy</h1>
+      <h1 className=" text-slate-200 text-center py-2">Privacy Policy</h1>
      </div>
      <div className=" text-white">
         <p className="text-white text-lg font-semibold text-center">Company</p>

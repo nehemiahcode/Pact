@@ -24,7 +24,7 @@ export default function Tabs() {
       <h1 className=" text-center text-white font-Poppins px-5 font-semibold text-3xl lg:text-4xl">
         Resources to help you get <br className=" hidden lg:flex"/> the most out of Pact
       </h1>
-      <div className=" grid grid-cols-2 lg:grid-cols-4 w-[100%]  mx-auto  place-content-center place-items-center gap-4 lg:gap-2 py-5 px-5">
+      <div className=" grid grid-cols-1 lg:grid-cols-4 w-[100%]  mx-auto  place-content-center place-items-center gap-4 lg:gap-2 py-5 px-5">
         {MyTabs.map((tabs, index) => (
           <Ripples
             key={index}
@@ -41,7 +41,7 @@ export default function Tabs() {
             >
               <span
                 className={`${
-                  activeTab === `${tabs.tab}` && "text-white"
+                  activeTab === `${tabs.tab}` && "text-cyan-400"
                 } text-black`}
               >
                 {tabs.icon}{" "}
