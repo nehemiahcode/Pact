@@ -1,4 +1,5 @@
 "use client"
+import Link from 'next/link'
 import React from 'react'
 import Ripples from "react-ripples"
 
@@ -13,11 +14,13 @@ export default function Getstarted() {
                   </p>
                  </div>
                 <div className=' w-[100%] lg:w-[50%] flex justify-start  lg:justify-end'>
+               <Link href={"/Contact"}>
                <Ripples>
                <button className=' px-5 py-2 rounded-md text-white flex bg-blue-600 text-center font-Poppins font-medium'>
                     Seek dev
                  </button>
                </Ripples>
+               </Link>
                 </div>
            </div>
     </section>

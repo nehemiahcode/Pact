@@ -1,6 +1,6 @@
 export const metadata = {
-    title: 'Pact | Home',
-    description: 'Welcome to pact where you can get in touch with Web developers for your bussiness',
+    title: 'Packt | Home',
+    description: 'Welcome to packt',
   }
 export default function RootLayout({ children }) {
   return (
