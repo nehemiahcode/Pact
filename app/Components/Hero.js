@@ -19,22 +19,22 @@ export default function Hero() {
               className="flex items-center gap-3 bg-slate-700  text-white  ring-white ring-inset ring-1 rounded-full px-5 py-1"
             >
               Ready to Launch one?
-              <Link href={"/about"}>
+              {/* <Link href={"/about"}> */}
                 <span className=" flex items-center text-sky-400 font-medium text-sm">
-                  {" "}
-                  here{" "}
+                  here
                   <span className=" text-sky-400 text-2xl">
                     <BsArrowRightShort />
                   </span>
                 </span>
-              </Link>
+              {/* </Link> */}
             </button>
           </Ripples>
-          <h1 className=" text-white text-4xl sm:text-6xl lg:text-6xl font-semibold py-6">
-            Where the world builds software
+          <h1 className=" text-white text-3xl sm:text-6xl lg:text-6xl font-semibold py-6">
+            Where we  build your software and manage your bussiness.
           </h1>
           <p className=" text-slate-200 font-medium font-Poppins  py-4 text-md lg:text-xl">
-            Our landing page template works on all devices, so you only have to
+            Our landing page Will guide you in all aspects about our offers that suits your need.<br/>
+            Offers that works on all devices, so you only have to
             set it up once, and get beautiful results forever.
           </p>
         <div>
@@ -50,6 +50,7 @@ export default function Hero() {
         <div className=" flex items-center justify-center px-5">
           <Image
             src={bgImage}
+            alt="An svg Image that looks like stripes of line(rectangular) in 45deg"
             className=" sm:w-[60%] lg:w-[100%] my-3 w-[100%] h-[100%]"
           />
         </div>

@@ -32,7 +32,7 @@ export default function Section1() {
   ];
   return (
     <section className=" font-Poppins bg-slate-900 w-full h-auto py-10  md:px-2  lg:px-20 xl:px-24">
-      <h1 className=" text-white font-semibold text-4xl lg:text-5xl text-center">
+      <h1 className=" text-white font-semibold text-3xl lg:text-4xl text-center">
         Focus on solving bigger problems
       </h1>
       <Image

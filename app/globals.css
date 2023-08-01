@@ -8,6 +8,7 @@ body, html {
     overflow-x: hidden;
     font-family: 'Poppins', "sans-serif";
     user-zoom: none;
+    user-select: none;
 }
 
 .form {

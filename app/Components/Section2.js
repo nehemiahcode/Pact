@@ -29,8 +29,8 @@ export default function Section2() {
   ];
   return (
     <section className=" bg-slate-900 w-full h-auto py-10 lg:px-20 md:px-2 xl:px-24">
-      <h1 className=" text-white font-Poppins text-4xl text-center px-5 sm:px-8 md:p-0 lg:text-5xl font-semibold">
-        Sound too good? Hear what our customers have to say
+      <h1 className=" text-white font-Poppins text-3xl text-center px-5 sm:px-8 md:p-0 lg:text-4xl font-semibold">
+        Sound too good? Hear <br className=" hidden lg:flex"/> what our customers have to say
       </h1>
       <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 w-full gap-6">
         {Test.map((test, index) => (
