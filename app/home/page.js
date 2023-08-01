@@ -9,10 +9,9 @@ import Getstarted from "../Components/Getstarted";
 import Mainlayout from "../Components/Mainlayout";
 import { BiLogoPatreon } from "react-icons/bi";
 
-function page() {
+function Page() {
   const [loading, setLoading] = useState(true);
   
-
   useEffect(() => {
     const Timer = setTimeout(() => {
         setLoading(false)
@@ -44,4 +43,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
