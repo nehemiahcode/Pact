@@ -114,7 +114,7 @@ export default function Home() {
             className="form bg-slate-200 w-[95%] sm:w-[70%] md:w-[50%] lg:w-[40%] mx-auto  rounded-lg shadow-xl h-[auto] py-10"
           >
             <h1 className="text-3xl pl-3 font-Poppins font-semibold bg-gradient-to-r from-slate-500 via-black to-slate-200 text-transparent bg-clip-text">
-              Let's Get Started
+              Let&apos;s Get Started
             </h1>
             <p className="text-md pl-3 py-3 font-medium font-Poppins px-3">
               Fill in the awesome form to Create an Account with Packt.
