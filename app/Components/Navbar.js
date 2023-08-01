@@ -7,7 +7,7 @@ import Ripples from "react-ripples"
 
 export default function Navbar() {
   return (
-    <header className=" font-Poppins bg-slate-800 w-full h-[70px] top-0 left-0 flex justify-between items-center py-3 relative px-5 md:px-10 lg:px-20 xl:px-24 ">
+    <header className=" font-Poppins bg-slate-800 w-full h-[70px] top-0 left-0 flex justify-between items-center py-3 relative px-3 md:px-10 lg:px-20 xl:px-24 ">
      <Link href={"/home"}>
      <div className=" flex items-center justify-normal gap-2">
         <span className=" text-pink-400 text-5xl">

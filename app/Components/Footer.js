@@ -13,7 +13,7 @@ export default function Footer() {
       </div>
       <h1 className=" text-slate-200 text-center py-2">Privacy Policy</h1>
      </div>
-     <div className=" text-white">
+     <div className=" text-white py-3">
         <p className="text-white text-lg font-semibold text-center">Company</p>
         <div className=" flex gap-4">
             <p className=" py-1 text-sm">About Us</p>

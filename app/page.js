@@ -87,9 +87,9 @@ export default function Home() {
 
   return (
     <>
-      <section className="font-Poppins w-screen h-screen bg-gradient-to-br from-slate-800 via-slate-400 to-slate-600 py-20">
+      <section className="font-Poppins w-auto h-screen bg-gradient-to-br from-slate-800 via-slate-400 to-slate-600 py-20">
         {signedin ? (
-          <div className="w-[90%] sm:w-[80%] md:w-[60%] lg:w-[50%] rounded-md mx-auto bg-slate-900 h-[300px] px-5 py-5">
+          <div className="w-[90%] sm:w-[80%] md:w-[60%] lg:w-[50%] rounded-md mx-auto bg-slate-900 h-[auto] px-5 py-7">
             <h1 className="text-center text-white font-Poppins font-semibold text-2xl">
               Welcome {text}
             </h1>
@@ -150,7 +150,7 @@ export default function Home() {
                   className={`${
                     loading && " cursor-not-allowed"
                   } bg-gradient-to-br from-slate-800 to-blue-900 duration-300 active:ring-2 ring-inset ring-white flex items-center justify-center rounded transition-all
-               px-3 py-3 w-[160px] text-white font-Poppins active:scale-105 hover:bg-red-400`}
+               px-3 py-3 w-[auto] text-white font-Poppins active:scale-105 hover:bg-red-400`}
                 >
                   {loading ? (
                     <div className="animate-spin text-2xl text-white">

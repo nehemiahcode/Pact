@@ -130,7 +130,7 @@ export default function Contactus() {
               className={`${
                 loading && " cursor-not-allowed"
               } bg-gradient-to-br from-slate-800 to-blue-900 duration-300 active:ring-2 ring-inset ring-white flex items-center justify-center rounded transition-all
-               px-3 py-3 w-[160px] text-white font-Poppins active:scale-105 hover:bg-red-400`}
+               px-3 py-3 w-[auto] text-white font-Poppins active:scale-105 hover:bg-red-400`}
             >
               {loading ? (
                 <div className="animate-spin text-2xl text-white">

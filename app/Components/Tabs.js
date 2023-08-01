@@ -35,7 +35,7 @@ export default function Tabs() {
           >
             <button
               className={`  ${
-                activeTab === `${tabs.tab}` && "  text-cyan-400 font-semibold"
+                activeTab === `${tabs.tab}` && "text-cyan-400 font-semibold"
               }  flex items-center gap-2 px-4 py-2 bg-slate-700  cursor-default  md:cursor-pointer text-white font-Poppins font-medium text-md`}
               onClick={() => setActiveTab(`${tabs.tab}`)}
             >

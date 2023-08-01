@@ -68,7 +68,7 @@ export default function Section2() {
               <div
                 className={`flex ${
                   test.span && " hidden sm:flex"
-                }  flex-col mx-auto bg-slate-700 w-[90%] sm:w-[70%] md:w-[100%] h-[250px] px-5 py-4`}
+                }  flex-col mx-auto bg-slate-700 w-[90%] sm:w-[70%] md:w-[100%] h-[270px] px-5 py-4`}
               >
                 <Image
                   src={test.image}
